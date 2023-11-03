@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Generator</title>
+</head>
+<body>
+    <h1>OTP Generator</h1>
+    <p>Click the button to generate a random 6-digit OTP:</p>
+    <input type="text" id="otp" readonly>
+    <button id="click" onclick="generateOTP()">Generate OTP</button>
+
+    <script>
+        const click=document.getElementById('click')
+      click.addEventListener("click",function(){
+        const otpLength=6;
+        let otp='';
+        for(i=0;i<otpLength;i++){
+            otp += Math.floor(Math.random()*10);
+        }
+        document.getElementById("otp").value=otp;
+      })
+        //function generateOTP() {
+          //  const otpLength = 6;
+            //let otp = '';
+            //for (let i = 0; i < otpLength; i++) {
+            //    otp += Math.floor(Math.random() * 10);
+           // }
+          //  document.getElementById("otp").value = otp;
+       // }
+    </script>
+</body>
+</html>
